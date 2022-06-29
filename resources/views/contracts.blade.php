@@ -112,7 +112,7 @@
             })
 
             window.addEventListener('OpenAddSubjectModal', function(){
-            $('.add').find('span').html('');
+            $('.addsubject').find('span').html('');
             $('.addSubject').find('form')[0].reset();
             $('.addSubject').modal('show');
         });

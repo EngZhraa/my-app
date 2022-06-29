@@ -11,7 +11,7 @@ class Subject extends Model
     protected $fillable = ['con_id','sub_num'];
 
 
-    public function subject(){
+    public function contract(){
         return $this->belongsTo(Contract::class,'con_id','id');
     }
 }

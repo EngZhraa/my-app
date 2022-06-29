@@ -23,28 +23,29 @@ class subjects extends Component
         ]);
     }
 
-    public function OpenAddSubjectModal(){
+    
+    public function OpenAddSubjectModal(){       
         $this->sub_name='';
-        
         $this->dispatchBrowserEvent('OpenAddSubjectModal');
         
     }
 
     public function save(){
-        $this->validate([
+        $this->validate
+        ([
             'sub_name'=>'required',
             
-            ]
-       
-        );
+        ]);
     
-            $save =Subjects::insert([
-            'con_id'=>$this->con_id,
-            '$sub_name'=>$this->sub_name,
+            $save =Subject::insert
+            ([
+                'con_id'=>$this->con_id,
+                'sub_name'=>$this->sub_name,
            
             ]);
             
-            if($save){
+            if($save)
+            {
                 $this->dispatchBrowserEvent('CloseAddSubjectModal');
                 $this->checkedSubject = [];
             }
@@ -52,7 +53,7 @@ class subjects extends Component
     }
 
     public function DeleteConfirm($id){
-        $info =Subjects::find($id);
+        $info =Subject::find($id);
         $this->dispatchBrowserEvent('SwalConfirm',[
             'title'=>'هل انت متأكد؟',
             'html'=>'من حذف <strong>'.$info->cont_subj.'</strong>',
@@ -77,7 +78,7 @@ class subjects extends Component
         ]);
     }
 
-    public function deleteCheckedٍSubjects($ids){
+    public function deletecheckedSubject($ids){
         sUBJECTS::whereKey($ids)->delete();
         $this->checkedSubject = [];
     }

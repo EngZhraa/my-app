@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                 <form wire:submit.prevent="save">
+                <form wire:submit.prevent="save">
                     <div class="row g-3 align-items-center">
                         <div class="col-md-3">
                         <label for="">اسم المشروع</label>

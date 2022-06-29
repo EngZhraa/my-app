@@ -2,6 +2,7 @@
    
 
     <button class="btn btn-primary btn-sm mb-3" wire:click="OpenAddContractModal()">اضافة عقد جديد</button>
+    <button class="btn btn-primary btn-sm mb-3" wire:click="sub_rout">المواضيع</button>
     <div>
         @if ($checkedContract)
             <button class="btn btn-danger" wire:click="deleteContracts()">حذف العقود المؤشرة ({{ count($checkedContract) }})</button>

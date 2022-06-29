@@ -34,7 +34,14 @@ class Finances extends Component
             
         ]);
     }
-
+  
+        public function con_rout()
+    
+        {
+            return redirect()->to('/contracts');
+        }
+    
+    
     public function OpenAddfinanceModal(){
         $this->proj_name='';
         //$this->benifit_comp='';

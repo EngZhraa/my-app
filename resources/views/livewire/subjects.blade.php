@@ -9,7 +9,7 @@
         <thead class="thead-inverse">
             <tr>
                 <th></th>
-                {{-- <th>اسم المشروع</th> --}}
+                <th>اسم المشروع</th>
                 <th>الموضوع</th>
                 <th>رقم العقد</th>
                 
@@ -21,12 +21,9 @@
                 @forelse($subjects as $subject)
                 <tr class="{{ $this->IsChecked($subject->id) }}">
                     <td><input type="checkbox" value="{{ $subject->id }}" wire:model="checkedSubject"></td>
-                    {{-- <td>{{ $subject->contract->finance->proj_name }}</td> --}}
+                    <td>{{ $subject->contract->finance->proj_name }}</td>
                     <td>{{ $subject->sub_name }}</td>
-                    <td>{{ $subject->con_id}}</td>
-                    
-                    
-                   
+                   <td>{{ $subject->contract->cont_num }}</td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-danger btn-sm" wire:click='DeleteConfirm({{ $subject->id }})'>حذف</button>
@@ -40,5 +37,6 @@
 
             </tbody>
     </table>
- 
+    @include('modals.add-modal-s')
+
 </div>

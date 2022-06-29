@@ -19,6 +19,13 @@ class Contracts extends Component
 
     public $listeners = ['delete', 'deleteCheckedContract'];
     public $checkedContract = [];
+
+    public function sub_rout()
+    
+    {
+        return redirect()->to('/subjects');
+    }
+    
     public function render()
     
     {

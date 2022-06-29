@@ -24,7 +24,6 @@
                 <h1>المواضيع</h1>
                 <br>
                 @livewire('subjects')
-
             </div>
         </div>
     </div>
@@ -35,6 +34,7 @@
     <script src="{{ asset('sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     @livewireScripts
+    
     
 <script type="text/javascript">
         window.addEventListener('OpenAddSubjectModal', function(){
