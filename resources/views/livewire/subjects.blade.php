@@ -1,5 +1,6 @@
 <div>
     <button class="btn btn-primary btn-sm mb-3" wire:click="OpenAddSubjectModal()">اضافة موضوع جديد</button>
+    <button class="btn btn-primary btn-sm mb-3" wire:click="cred_rout">الاعتمادات</button>
     <div>
         @if ($checkedSubject)
             <button class="btn btn-danger" wire:click="deleteSubjects()">حذف المواضيع المؤشرة ({{ count($CheckedSubject) }})</button>

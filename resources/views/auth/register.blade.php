@@ -48,14 +48,14 @@
             
             <div class="mt-4">
                 <x-label for="gover" :value="__('Gover')" />
-
+<
                 <select id="gover" class="block mt-1 w-full" name="gover"  required>
                 <option value="">اختر الدائرة</option>
                     @foreach (App\Models\Gover::orderBy('gov_name','desc')->get() as $gover)
                     
                         <option value="{{ $gover->gov_name}}">{{ $gover->gov_name }}</option>
                     @endforeach
-                </select>
+                /select>
             </div>
            
 

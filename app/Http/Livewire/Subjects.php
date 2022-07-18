@@ -29,6 +29,13 @@ class subjects extends Component
         $this->dispatchBrowserEvent('OpenAddSubjectModal');
         
     }
+    
+    public function cred_rout()
+    
+    {
+        return redirect()->to('/credits');
+    }
+
 
     public function save(){
         $this->validate
@@ -79,7 +86,7 @@ class subjects extends Component
     }
 
     public function deletecheckedSubject($ids){
-        sUBJECTS::whereKey($ids)->delete();
+        Subject::whereKey($ids)->delete();
         $this->checkedSubject = [];
     }
 

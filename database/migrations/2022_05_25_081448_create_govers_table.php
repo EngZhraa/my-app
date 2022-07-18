@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('governorate', function (Blueprint $table) {
+        Schema::create('govers', function (Blueprint $table) {
             $table->id();
             $table->string('gov_name');
             $table->timestamps();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_governorate');
+        Schema::dropIfExists('_govers');
     }
 };

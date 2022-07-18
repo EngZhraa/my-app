@@ -30,6 +30,22 @@
                                </div>
                          <span class="text-danger"> @error('assig_year') {{ $message }}@enderror</span>
                      </div>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-3">
+                               <label for="gover" >الجهة المستفيدة </label>                           
+
+                               </div>
+                            <div class="col-md-9">
+                                <select id="gover" class="form-select"  wire:model="benifit_comp" >
+                                    <option value="">اختر الدائرة</option>
+                                    @foreach (App\Models\Gover::orderBy('gov_name','desc')->get() as $gover)
+                                    
+                                    <option value="{{ $gover->gov_name}}">{{ $gover->gov_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <span class="text-danger"> @error('benifit_comp') {{ $message }}@enderror</span>
+                     </div>
                     <div class="row g-3 align-items-center">
                         <div class="col-md-3">
                         <label for="">الكلفة</label>

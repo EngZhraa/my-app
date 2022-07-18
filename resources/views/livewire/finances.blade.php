@@ -18,6 +18,7 @@
                 <th>سنة التخصيص</th>
                 <th>الكلفة</th>
                 <th>نوع التمويل</th>
+                <th>الجهة المستفيدة </th>
                 <th>تبويب حسابي</th>
                 <th>تخصيص التبويب (العملة المحلية )</th>
                 <th>تخصيص التبويب العملة الاجنبية</th>
@@ -33,6 +34,7 @@
                     <td>{{ $finance->assig_year }}</td>
                     <td>{{ $finance->proj_cost }}</td>
                     <td>{{ $finance->fina_type }}</td>
+                    <td>{{ $finance->benifit_comp }}</td>
                     <td>{{ $finance->fina_classfic }}</td>
                     <td>{{ $finance->fina_amnt_loc }}</td>
                     <td>{{ $finance->fina_amnt_for }}</td>
@@ -55,4 +57,5 @@
     @include('modals.add-modal-p')
     @include('modals.edit-modal-p')
     @include('modals.add-modal-s')
+    @include('modals.add-modal')
 </div>

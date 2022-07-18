@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class govertable extends Seeder
 {
@@ -16,7 +17,7 @@ class govertable extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
-        DB::table('governorate')->truncate(); 
+        DB::table('govers')->truncate(); 
         $file = Storage::disk('csv')->get('govers_.csv'); // return string
         $data = explode("\n",$file); // ['']
         $c=0;
@@ -29,10 +30,10 @@ class govertable extends Seeder
             }
             // read line
             $newValue = explode(',',$value); // [1,baghdad]
-            $gover = governorate::where('name','=',$newValue[1])->get()->first();
+            $gover = govers::where('name','=',$newValue[1])->get()->first();
             if(!$gover)
             {
-               $gover = governorate::create([
+               $gover = govers::create([
                    'name'=>$newValue[1]
                ]); 
             }

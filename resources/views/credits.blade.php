@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>العقود</title>
+    <title>الاعتمادات</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('sweetalert2/sweetalart2.min.css') }}">
     <script data-require="bootstrap@3.3.2" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -21,11 +21,12 @@
 
     <div class="container">
         <div class="row" style="margin-top: 45px">
-            <div class="col-md-6 offset-md-3">
-                <h4>العقود</h4>
-                @livewire('contracts')
+            <div class="col-md-6 offset-md-0">
+                <h3>الاعتمادات</h3>
+            </br>
+                @livewire('credits')
 
-         |   </div>
+            </div>
         </div>  
     </div>
 
@@ -38,32 +39,28 @@
     
 <script type="text/javascript">
 
-        window.addEventListener('OpenAddSubjectModal', function(){
-            $('.addSubject').find('span').html('');
-            $('.addSubject').find('form')[0].reset();
-            $('.addSubject').modal('show');
+     
+        window.addEventListener('OpenAddCreditModal', function(){
+            $('.addCredit').find('span').html('');
+            $('.addCredit').find('form')[0].reset();
+            $('.addCredit').modal('show');
         });
-        window.addEventListener('OpenAddContractModal', function(){
-            $('.addContract').find('span').html('');
-            $('.addContract').find('form')[0].reset();
-            $('.addContract').modal('show');
-        });
-       window.addEventListener('CloseAddContractModal', function(){
-            $('.addContract').find('span').html('');
-            $('.addContract').find('form')[0].reset();
-            $('.addContract').modal('hide');
-            alert('تمت اضافة العقد جديد بنجاح');
+       window.addEventListener('CloseAddCreditModal', function(){
+            $('.addCredit').find('span').html('');
+            $('.addCredit').find('form')[0].reset();
+            $('.addCredit').modal('hide');
+            alert('تمت اضافة الاعتماد جديد بنجاح');
        });
 
-       window.addEventListener('OpenEditContractModal', function(event){
-            $('.editContract').find('span').html('');
-            $('.editContract').modal('show');
+       window.addEventListener('OpenEditCreditModal', function(event){
+            $('.editCredit').find('span').html('');
+            $('.editCredit').modal('show');
        });
 
-       window.addEventListener('CloseEditContractModal', function(event){
-            $('.editContract').find('span').html('');
-            $('.editContract').find('form')[0].reset();
-            $('.editContract').modal('hide');
+       window.addEventListener('CloseEditCreditModal', function(event){
+            $('.editCredit').find('span').html('');
+            $('.editCredit').find('form')[0].reset();
+            $('.editCredit').modal('hide');
             alert('تمت عملية تعديل البيانات بنجاح');
        });
 
@@ -93,7 +90,7 @@
            alert('تم حذف بيانات ');
        });
 
-       window.addEventListener('swal:deleteContracts', function(event){
+       window.addEventListener('swal:deletecredits', function(event){
             swal.fire({
                 title:event.detail.title,
                 html:event.detail.html,
@@ -107,15 +104,11 @@
                 allowOutsideClick:false
             }).then(function(result){
                 if(result.value){
-                    window.livewire.emit('deleteCheckedContracts',event.detail.checkedIDs);
+                    window.livewire.emit('deleteCheckedcredits',event.detail.checkedIDs);
                 }
             })
 
-            window.addEventListener('OpenAddSubjectModal', function(){
-            $('.addsubject').find('span').html('');
-            $('.addSubject').find('form')[0].reset();
-            $('.addSubject').modal('show');
-        });
+           
        });
 
 
