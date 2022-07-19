@@ -21,11 +21,11 @@
 
     <div class="container">
         <div class="row" style="margin-top: 45px">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-2">
                 <h4>العقود</h4>
                 @livewire('contracts')
 
-         |   </div>
+            </div>
         </div>  
     </div>
 

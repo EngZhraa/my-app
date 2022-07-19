@@ -12,14 +12,14 @@
         <thead class="thead-inverse">
             <tr>
                 <th></th>
-                <th>اسم المشروع</th>
-                <th>رقم العقد</th>
-                <th>مبلغ العقد</th>
-                <th>نوع العقد</th>
-                <th>الشركة المنفذة</th>
-                <th>تاريخ توقيع العقد</th>
-                <th>تاريخ انتهاء العقد</th>
-                <th>العملية</th>
+                <th class="text-nowrap">اسم المشروع</th>
+                <th class="text-nowrap">رقم العقد</th>
+                <th class="text-nowrap">مبلغ العقد</th>
+                <th class="text-nowrap">نوع العقد</th>
+                <th class="text-nowrap">الشركة المنفذة</th>
+                <th class="text-nowrap">تاريخ توقيع العقد</th>
+                <th class="text-nowrap">تاريخ انتهاء العقد</th>
+                <th class="text-nowrap">العملية</th>
             </tr>
             </thead>
             <tbody>
