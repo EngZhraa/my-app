@@ -38,8 +38,7 @@
                             <div class="col-md-9">
                                 <select id="gover" class="form-select"  wire:model="benifit_comp" >
                                     <option value="">اختر الدائرة</option>
-                                    @foreach (App\Models\Gover::orderBy('gov_name','desc')->get() as $gover)
-                                    
+                                    @foreach ($govers as $gover)
                                     <option value="{{ $gover->gov_name}}">{{ $gover->gov_name }}</option>
                                     @endforeach
                                 </select>

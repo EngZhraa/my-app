@@ -7,6 +7,7 @@ use App\Models\Contract;
 use App\Models\Company;
 use App\Models\Subject;
 use App\Models\Credit;
+use App\Models\gover;
 
 class Credits extends Component
 {   
@@ -23,7 +24,8 @@ class Credits extends Component
             'contracts'=>Contract::orderby('cont_date','asc')->get(),
             'credits'=>Credit::orderby('cred_num','asc')->get(),
             'subjects'=>Subject::orderby('id','asc')->get(),
-            'companies'=>Company::orderby('comp_name','asc')->get()
+            'companies'=>Company::orderby('comp_name','asc')->get(),   
+            'govers'=>Gover::orderby('gov_name','desc')->get()
             
         ]);
     }

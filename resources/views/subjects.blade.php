@@ -48,7 +48,16 @@
             $('.addSubject').modal('hide');
             alert('تمت اضافة الموضوع الجديد بنجاح');
        });
-
+       window.addEventListener('OpenEditSubjectModal', function(){
+            $('.editSubject').find('span').html('');  
+            $('.editSubject').modal('show');
+        });
+       window.addEventListener('CloseEditSubjectModal', function(){
+            $('.editSubject').find('span').html('');
+            $('.editSubject').find('form')[0].reset();
+            $('.editSubject').modal('hide');
+            alert('تمت تعديل الموضوع  بنجاح');
+       });
        window.addEventListener('SwalConfirm', function(event){
             swal.fire({
                 title:event.detail.title,

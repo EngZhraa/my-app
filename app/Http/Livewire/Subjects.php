@@ -10,6 +10,7 @@ use App\Models\Subject;
 class subjects extends Component
 {   
     public $con_id,$sub_name, $contract , $finance;
+    public $upd_con_id,$upd_sub_name;
 
     public $listeners = ['delete', 'deletecheckedSubject'];
     public $checkedSubject = [];
@@ -58,6 +59,45 @@ class subjects extends Component
             }
         
     }
+
+
+
+    public function OpenEditSubjectModal($id){
+        
+        $info = Subject::find($id);
+        $this->upd_id_con = $info->id_con;
+        $this->upd_sub_name = $info->sub_name;
+        $this->cid = $info->id;
+        $this->dispatchBrowserEvent('OpenEditSubjectModal',[
+            'id'=>$id
+        ]);
+    }
+
+    public function update(){
+        $cid = $this->cid;
+        $this->validate([
+        'upd_id_con'=>'required',
+        'upd_sub_name'=>'required',
+        ],[
+        'upd_id_con.required'=>'يجب اختيار احدى العقود',
+        'upd_sub_name.required'=>'اسم المشروع مطلوب',
+        
+        ]);
+
+        $update =Subject::find($cid)->update([
+
+        'id_con'=>$this->upd_id_con,
+        'sub_name'=>$this->upd_sub_name,
+       
+        ]);
+
+        if($update){
+            $this->dispatchBrowserEvent('CloseEditSubjectModal');
+            $this->checkedSubject = [];
+        }
+    }
+
+
 
     public function DeleteConfirm($id){
         $info =Subject::find($id);

@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Finance;
 use App\Models\Contract;
 use App\Models\Company;
+use App\Models\gover;
 
 
 class Finances extends Component
@@ -15,8 +16,7 @@ class Finances extends Component
 
     public $upd_proj_name,$upd_assig_year,$upd_proj_cost,$upd_fina_type,$upd_fina_classfic,$upd_fina_amnt_loc,$upd_fina_amnt_for,$upd_notes,$upd_benifit_comp;
 
-    public $finance,$cont_date,$cont_num,$full_amnt_cont,$cont_end_date,$finn_type,
-    $company;
+    public $finance,$cont_date,$cont_num,$full_amnt_cont,$cont_end_date,$finn_type,$company;
 
     
 
@@ -31,6 +31,7 @@ class Finances extends Component
             'finances'=>Finance::orderby('assig_year','asc')->get(),
             'contracts'=>Contract::orderby('cont_date','asc')->get(),
             'companies'=>Company::orderby('comp_name','asc')->get(),
+            'govers'=>Gover::orderby('gov_name','desc')->get()
             
         ]);
     }
@@ -140,7 +141,8 @@ class Finances extends Component
         ]);
 
         $update =Finance::find($cid)->update([
-        'fin_id'=>$this->upd_proj_name,
+
+        'proj_name'=>$this->upd_proj_name,
         'benifit_comp'=>$this->upd_benifit_comp,
         'assig_year'=>$this->upd_assig_year,
         'proj_cost'=>$this->upd_proj_cost,

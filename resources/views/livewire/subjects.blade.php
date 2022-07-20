@@ -28,7 +28,7 @@
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-danger btn-sm" wire:click='DeleteConfirm({{ $subject->id }})'>حذف</button>
-                           
+                            <button class="btn btn-success btn-sm" wire:click='OpenEditSubjectModal({{ $subject->id }})'>تعديل</button>
                         </div>
                     </td>
                 </tr>
@@ -39,5 +39,6 @@
             </tbody>
     </table>
     @include('modals.add-modal-s')
+    @include('modals.edit-modal-s')
 
 </div>
