@@ -53,7 +53,7 @@
             $('.editSubject').modal('show');
         });
        window.addEventListener('CloseEditSubjectModal', function(){
-            $('.editSubject').find('span').html('');
+            $('.                                                                                                                                                ').find('span').html('');
             $('.editSubject').find('form')[0].reset();
             $('.editSubject').modal('hide');
             alert('تمت تعديل الموضوع  بنجاح');

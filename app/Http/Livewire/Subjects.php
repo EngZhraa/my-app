@@ -87,7 +87,7 @@ class subjects extends Component
         $update =Subject::find($cid)->update([
 
         'id_con'=>$this->upd_id_con,
-        'sub_name'=>$this->upd_sub_name,
+        'sub_name'=>$this->upd_sub_name
        
         ]);
 

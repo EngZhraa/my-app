@@ -42,7 +42,7 @@
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-danger btn-sm" wire:click='DeleteConfirm({{ $credit->id }})'>حذف</button>
-                            <button class="btn btn-success btn-sm" wire:click='OpenEditcreditModal({{ $credit->id }})'>تعديل</button>
+                            <button class="btn btn-success btn-sm" wire:click='OpenEditCreditModal({{ $credit->id }})'>تعديل</button>
                            <button class="btn btn-primary btn-sm" wire:click='OpenAddCreditModal()'>اضافة اعتماد</button>
                         </div>
                     </td>
@@ -56,4 +56,5 @@
 
 
      @include('modals.add-modal-c')
+     @include('modals.edit-modal-c')
 </div>

@@ -21,7 +21,7 @@
                           </select>
                          
                         </div>
-                            <span class="text-danger"> @error('sub_name') {{ $message }}@enderror</span>
+                            <span class="text-danger"> @error('sub_id') {{ $message }}@enderror</span>
                     </div>
                     <div class="row g-3 align-items-center">
                         <div class="col-md-3">
