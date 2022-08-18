@@ -18,7 +18,7 @@
                                         <option value="{{ $finance->id }}">{{ $finance->proj_name }}</option>
                                     @endforeach      
                               </select>
-                            </div>
+                            
                              <span class="text-danger"> @error('finance') {{ $message }}@enderror</span>
                     </div>
                     <div class="row g-3 align-items-center">

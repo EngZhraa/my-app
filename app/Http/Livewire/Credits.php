@@ -23,13 +23,24 @@ class Credits extends Component
             'finances'=>Finance::orderby('assig_year','asc')->get(),
             'contracts'=>Contract::orderby('cont_date','asc')->get(),
             'credits'=>Credit::orderby('cred_num','asc')->get(),
-            'subjects'=>Subject::orderby('id','asc')->get(),
+            'subjects'=>Subject::orderby('sub_name','asc')->get(),
             'companies'=>Company::orderby('comp_name','asc')->get(),   
             'govers'=>Gover::orderby('gov_name','desc')->get()
             
         ]);
     }
 
+    public function enf_rout()
+    
+    {
+        return redirect()->to('/enforcments');
+    }
+    public function rel_rout()
+    
+    {
+        return redirect()->to('/enforcments');
+    }
+    
     
     public function OpenAddCreditModal(){  
 

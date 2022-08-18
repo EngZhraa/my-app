@@ -40,3 +40,8 @@ Route::get('/credits', function () {
 })->middleware(['auth'])->name('credits');
 require __DIR__.'/auth.php';
 
+Route::get('/enforcments', function () {
+    return view('enforcments');
+})->middleware(['auth'])->name('enforcments');
+require __DIR__.'/auth.php';
+

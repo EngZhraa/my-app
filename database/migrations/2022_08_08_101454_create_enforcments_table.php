@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('enforcments', function (Blueprint $table) {
             $table->id();
+            $table->integer('cred_id');
             $table->string('enf_num');
             $table->date('enf_date');
             $table->integer('enf_amnt');

@@ -2,7 +2,7 @@
    
 
     <button class="btn btn-primary btn-sm mb-3" wire:click="OpenAddfinanceModal()">اضافة مشروع جديد</button>
-    <button class="btn btn-primary btn-sm mb-3" wire:click="con_rout">العقود</button>
+    <button class="btn btn-primary btn-sm mb-3" wire:click="con_rout(10)">العقود</button>
     <div>
         @if ($checkedFinance)
             <button class="btn btn-danger" wire:click="deleteFinances()">حذف المشاريع المؤشرة ({{ count($checkedFinance) }})</button>
@@ -43,7 +43,7 @@
                         <div class="btn-group">
                             <button class="btn btn-danger btn-sm" wire:click='DeleteConfirm({{ $finance->id }})'>حذف</button>
                             <button class="btn btn-success btn-sm" wire:click='OpenEditFinanceModal({{ $finance->id }})'>تعديل</button>
-                            <button class="btn btn-primary btn-sm" wire:click="OpenAddContractModal()"> عقد جديد</button>
+                            <button class="btn btn-primary btn-sm" wire:click='OpenAddContractModal()'> عقد جديد</button>
                         </div>
                     </td>
                 </tr>
@@ -56,6 +56,5 @@
 
     @include('modals.add-modal-p')
     @include('modals.edit-modal-p')
-    @include('modals.add-modal-s')
     @include('modals.add-modal')
 </div>

@@ -25,15 +25,15 @@ class Contracts extends Component
     {
         return redirect()->to('/subjects');
     }
-    
+
+        
     public function render()
     
     {
         return view('livewire.contracts',[
             'finances'=>Finance::orderby('assig_year','asc')->get(),
             'contracts'=>Contract::orderby('cont_date','asc')->get(),
-            'companies'=>Company::orderby('comp_name','asc')->get(),
-           
+            'companies'=>Company::orderby('comp_name','asc')->get()
         ]);
     }
 

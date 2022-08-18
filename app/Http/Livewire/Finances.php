@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Livewire\Contracts;
 use App\Models\Finance;
 use App\Models\Contract;
 use App\Models\Company;
@@ -36,10 +37,11 @@ class Finances extends Component
         ]);
     }
   
-        public function con_rout()
+    
+    public function con_rout($x)
     
         {
-            return redirect()->to('/contracts');
+            return redirect()->route('contracts', $x);
         }
     
     
@@ -55,6 +57,18 @@ class Finances extends Component
         $this->notes='';
         
         $this->dispatchBrowserEvent('OpenAddfinanceModal');
+    }
+
+    public function OpenAddContractModal(){
+        $this->finance='';
+        $this->cont_date='';
+        $this->cont_num='';
+        $this->full_amnt_cont='';
+        $this->finn_type='';
+        $this->cont_end_date='';
+        $this->company='';
+        $this->dispatchBrowserEvent('OpenAddContractModal');
+        
     }
 
     public function save(){
@@ -195,21 +209,7 @@ class Finances extends Component
     }
 
 
-    public function yearList(){
-
-        
-    }
-    public function OpenAddContractModal(){
-        $this->finance='';
-        $this->cont_date='';
-        $this->cont_num='';
-        $this->full_amnt_cont='';
-        $this->finn_type='';
-        $this->cont_end_date='';
-        $this->company='';
-        $this->dispatchBrowserEvent('OpenAddContractModal');
-        
-    }
+    
 
    
 
