@@ -38,7 +38,9 @@
                     <td>{{ $finance->fina_classfic }}</td>
                     <td>{{ $finance->fina_amnt_loc }}</td>
                     <td>{{ $finance->fina_amnt_for }}</td>
-                    
+                    @foreach($finances as $finance)
+    <td><a href="{{ url('fin_detail?'.$finance->id) }}">Details</a></td>
+@endforeach
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-danger btn-sm" wire:click='DeleteConfirm({{ $finance->id }})'>حذف</button>

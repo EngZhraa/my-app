@@ -47,7 +47,7 @@
                         <div class="col-md-9">
                          <input type="date" class="form-control"   wire:model="upd_cred_open_date">
                         </div>
-                        <span class="text-danger"> @error('upd_cred_num') {{ $message }}@enderror</span>
+                        <span class="text-danger"> @error('upd_cred_open_date') {{ $message }}@enderror</span>
                     </div>
                     <div class="row g-3 align-items-center">
                         <div class="col-md-3">
@@ -86,7 +86,7 @@
                          <label for="">تاريخ انتهاء الشحن</label>
                         </div>
                         <div class="col-md-9">
-                         <input type="date" class="form-control" min="{{$cred_open_date}}"   wire:model="upd_ship_end_date">
+                         <input type="date" class="form-control" min="{{$upd_cred_open_date}}"   wire:model="upd_ship_end_date">
                         </div>
                         <span class="text-danger"> @error('upd_ship_end_date') {{ $message }}@enderror</span>
                     </div>
@@ -95,7 +95,7 @@
                          <label for="">تاريخ غلق الاعتماد</label>
                         </div>
                         <div class="col-md-9">
-                         <input type="date" class="form-control"  min="{{$cred_open_date}}" wire:model="upd_cred_end_date">
+                         <input type="date" class="form-control"  min="{{$upd_ship_end_date}}" wire:model="upd_cred_end_date">
                         </div>
                         <span class="text-danger"> @error('upd_cred_end_date') {{ $message }}@enderror</span>
                     </div>

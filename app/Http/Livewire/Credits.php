@@ -12,7 +12,7 @@ use App\Models\gover;
 class Credits extends Component
 {   
     public $sub_id,$cred_num,$subject,$cred_amnt,$sub_name,$cred_open_date,$cred_exc_comp,$ex_price,$per_cred_cont,$ship_end_date,$cred_end_date,$notes;
-    public $upd_sub_id,$upd_cred_num,$upd_subject,$upd_cred_amnt,$upd_sub_name,$upd_cred_open_date,$upd_cred_exc_comp,$upd_ex_price,$upd_per_cred_cont,$upd_ship_end_date,$upd_cred_end_date,$upd_notes;
+    public $upd_sub_id,$upd_cred_num,$upd_cred_amnt,$upd_sub_name,$upd_cred_open_date,$upd_cred_exc_comp,$upd_ex_price,$upd_per_cred_cont,$upd_ship_end_date,$upd_cred_end_date,$upd_notes;
     public $listeners = ['delete', 'deletecheckedcredit'];
     public $checkedCredit = [];
 
@@ -111,7 +111,7 @@ class Credits extends Component
         $this->upd_sub_id = $info->sub_id;
         $this->upd_cred_num = $info->cred_num;
         $this->upd_cred_amnt = $info->cred_amnt;
-        $this->upd_cred_open_date = $info->cred_open;
+        $this->upd_cred_open_date = $info->cred_open_date;
         $this->upd_cred_exc_comp = $info->cred_exc_comp;
         $this->upd_ex_price = $info->ex_price;
         $this->upd_per_cred_cont = $info->per_cred_cont;
@@ -125,11 +125,8 @@ class Credits extends Component
     }
 
     public function update(){
-       
-    
+
         $cid = $this->cid;
-       
- 
         $this->validate([
         'upd_sub_id'=>'required',
         'upd_cred_num'=>'required',

@@ -28,7 +28,7 @@
             <div class="col-md-9 offset-md-1">
                 <h4>تمويل المشاريع</h4><br>
                 @livewire('finances')
-                @livewire('contracts')
+                
             </div>
         </div>
     </div>
@@ -77,12 +77,6 @@
             $('.addContract').modal('hide');
             alert('تمت اضافة العقد جديد بنجاح');
        });
-
-
-
-
-
-
 
        window.addEventListener('SwalConfirm', function(event){
             swal.fire({

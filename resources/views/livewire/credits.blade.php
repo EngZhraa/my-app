@@ -4,6 +4,7 @@
     <button class="btn btn-primary btn-sm mb-3" wire:click="OpenAddCreditModal()">اضافةاعتماد جديد</button>
     <button class="btn btn-primary btn-sm mb-3" wire:click="enf_rout">التعزيزات</button>
     <button class="btn btn-primary btn-sm mb-3" wire:click="rel_rout">الاطلاقات</button>
+    <button class="btn btn-primary btn-sm mb-3" wire:click="con_rout">شروط الدفع</button>
     <div>
         @if ($checkedCredit)
             <button class="btn btn-danger" wire:click="deleteCredit()">حذف العقود المؤشرة ({{ count($checkedCredit) }})</button>

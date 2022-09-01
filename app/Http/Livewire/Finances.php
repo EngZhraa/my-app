@@ -25,7 +25,9 @@ class Finances extends Component
 
     public $listeners = ['delete', 'deleteCheckedFinance'];
     public $checkedFinance = [];
+    
     public function render()
+
     
     {
         return view('livewire.Finances',[

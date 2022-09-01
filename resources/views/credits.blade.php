@@ -104,7 +104,7 @@
                 allowOutsideClick:false
             }).then(function(result){
                 if(result.value){
-                    window.livewire.emit('deleteCheckedcredits',event.detail.checkedIDs);
+                    window.livewire.emit('deletecheckedcredit',event.detail.checkedIDs);
                 }
             })
 

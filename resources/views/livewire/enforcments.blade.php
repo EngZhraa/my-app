@@ -57,4 +57,7 @@
 
   
     @include('modals.add-modal-e')
+    @include('modals.edit-modal-e')
+    
+
 </div>

@@ -16,9 +16,7 @@ use Illuminate\Validation\Rules;
 class RegisteredUserController extends Controller
 {  public function index()
     {
-        /**$gover = DB::select('select * from govers');
-        $govers=DB::table('govers')->get();
-        return view('auth.register',compact($govers));*/
+        
         $govers = Gover::all();
         return view('auth.register')->with('data', $govers);
     }

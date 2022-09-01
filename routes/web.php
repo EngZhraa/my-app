@@ -45,3 +45,7 @@ Route::get('/enforcments', function () {
 })->middleware(['auth'])->name('enforcments');
 require __DIR__.'/auth.php';
 
+Route::get('/fin_detail?{$Fdet}', function(){ 
+    return view('fin_detail');
+})->middleware(['auth'])->name('fin_detail');
+    require __DIR__.'/auth.php';

@@ -11,5 +11,6 @@ class Finance extends Model
     
     protected $fillable = [
         'proj_name','benifit_comp','assig_year','proj_cost','fina_type','fina_classfic','fina_amnt_loc','fina_amnt_for','notes' 
+        
     ];
 }
